@@ -453,7 +453,7 @@
 				<div class="sidebar-menu">
 					<ul id="accordion-menu">
 						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
 								<span class="micon bi bi-house"></span
 								><span class="mtext">Home</span>
 							</a>
@@ -462,68 +462,56 @@
 								<li><a href="index3.html">User Dashboard</a></li>
 							</ul>
 						</li>
-                        <!--
+
 						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-textarea-resize"></span
-								><span class="mtext">Forms</span>
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-people"></span>
+								<span class="mtext">Clinic Management</span>
 							</a>
+
 							<ul class="submenu">
-								<li><a href="form-wizard.html">Form Wizard</a></li>
+								<li><a href="index2.html">Doctor Management</a></li>
+								<li><a href="index3.html">Staff Management</a></li>
+								<li><a href="index3.html">Patient Management</a></li>
 							</ul>
 						</li>
-                        -->
+                    
 						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-building"></span>
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-calendar"></span>
 								<span class="mtext">Appointment</span>
 							</a>
 						</li>
-					</ul>
+
 						</li>                    
 						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-person"></span>
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-graph-up"></span>
 								<span class="mtext">Statistic</span>
 							</a>
-						</ul>
+						</li>
+
                         <li class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle">
-                                <i class="micon bi bi-graph-up"></i>
-                                <span class="mtext">Reports</span>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-arrow-up-right-square"></span
+							<a href="javascript:;" class="dropdown-toggle no-arrow" >
+								<span class="micon bi bi-geo-alt"></span
 								><span class="mtext">Mapping</span>
 							</a>
 						</li>
+
                         <li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-cart3"></span
-								><span class="mtext">Vissualization</span>
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-bar-chart"></span
+								><span class="mtext">Visualization</span>
 							</a>
 						</li>
-                        <li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-bag"></span
-								><span class="mtext">Chat</span>
-							</a>
-						</li>
-						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-bag"></span
-								><span class="mtext">Clinic Management</span>
-							</a>
-						</li>
+
 						<li>
 							<a href="chat.html" class="dropdown-toggle no-arrow">
 								<span class="micon bi bi-chat-right-dots"></span
 								><span class="mtext">Chat</span>
 							</a>
 						</li>
-					
+			
 						<li>
 							<div class="dropdown-divider"></div>
 						</li>
