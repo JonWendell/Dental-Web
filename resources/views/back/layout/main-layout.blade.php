@@ -222,7 +222,7 @@
 					</div>
 				</div>
 
-				@if (Auth::guard('admin')->check())
+		
 				<div class="user-info-dropdown">
 					<div class="dropdown">
 						<a
@@ -248,19 +248,14 @@
 							<a class="dropdown-item" href="faq.html"
 								><i class="dw dw-help"></i> Help</a
 							>
-							<a class="dropdown-item" href="{{route('admin.logout_handler')}}"
-								onclick="event.preventDefault();document.getElementById('adminLogoutForm').submit();">
-								<i class="dw dw-logout"></i> Log Out</a
-							>
+							<a class="dropdown-item" href="{{ route('manual.logout') }}">
+								<i class="dw dw-logout"></i> Log Out
+							</a>
 
-							<form action="{{route('admin.logout_handler')}}" id="adminLogoutForm" method="POST">@csrf</form>
 						</div>
 					</div>
 				</div>
 
-				@elseif (Auth::guard('seller')->check())
-
-				@endif
 			</div>
 		</div>
 
@@ -452,15 +447,12 @@
 				<div class="sidebar-menu">
 					<ul id="accordion-menu">
 						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-house"></span
-								><span class="mtext">Home</span>
+							<a href="{{ route('admin.home') }}" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-house"></span>
+								<span class="mtext">Home</span>
 							</a>
-							<ul class="submenu">
-								<li><a href="index2.html">Cashier Dashboard</a></li>
-								<li><a href="index3.html">User Dashboard</a></li>
-							</ul>
 						</li>
+						
                         <!--
 						<li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
@@ -492,40 +484,40 @@
 							<!-- Add the button to navigate to the route for managing users -->	
 							<ul class="submenu">
 								<li>				
-							<a href="{{ route('user/table')}}" >Manage Users</a>
+							<a href="{{ route('userTable') }}">Manage Users</a>
 						</li>
 						</ul>
                         <li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
 								<span class="micon bi bi-box"></span
-								><span class="mtext">Inventory</span>
+								><span class="mtext">Mapping</span>
 							</a>
 							<ul class="submenu">
 								<li>			
-							<a href="{{ route('inventory.index') }}">View Inventory</a>
-							<a href="{{ route('inventory.create') }}">Create Inventory</a>
+							
+						
 						</li>
 						</ul>
                         <li class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle">
+                            <a href="javascript:;" class="dropdown-toggle no-arrow">
                                 <i class="micon bi bi-graph-up"></i>
                                 <span class="mtext">Statistics</span>
                             </a>
                         </li>
                         <li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
 								<span class="micon bi bi-arrow-up-right-square"></span
 								><span class="mtext">Analysis</span>
 							</a>
 						</li>
                         <li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
 								<span class="micon bi bi-cart3"></span
 								><span class="mtext">E-commerce</span>
 							</a>
 						</li>
                         <li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle">
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
 								<span class="micon bi bi-bag"></span
 								><span class="mtext">Sales</span>
 							</a>
@@ -560,18 +552,18 @@
 		</div>
 		<div class="mobile-menu-overlay"></div>
 
-		<div class="main-container">
-			<div class="pd-ltr-20">
-				<div class="card-box pd-20 height-100-p mb-30">
-					<div class="row align-items-center">
-                        <div>
-                            @yield('content')
-                        </div>
+
+			<div class="main-container">
+				<div class="card-box mb-30">
+					@yield('content')
 				</div>
+			</div>
 				<div class="footer-wrap pd-20 mb-20 card-box">
 					@2023 | RXCUE PHARMACY
 				</div>
 			</div>
+		</div>
+		</div>
 		</div>
 
 		<!-- js -->

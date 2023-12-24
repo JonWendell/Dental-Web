@@ -1,23 +1,67 @@
-@extends('layouts.app')
-
+@extends('back.layout.landing-layout')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Home')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<head>
+    <meta charset="utf-8">
+    <title>eMed - Home</title>
+    <!-- Add your stylesheet link and other meta tags here -->
+    <style>
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 50px 0;
+            margin-top: 2px;
+            margin-bottom: 3px;
+        }
 
-                    {{ __('You are logged in!') }}
-                </div>
+
+        .container-fluid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .col-12 {
+            flex: 5;
+            padding: 20px;
+        }
+
+        .col-12 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="col-12">
+                <img src="/back/vendors/images/medicines-l.webp" alt="Pharmacy Image">
+            </div>
+            <div class="col-12">
+                <h1>Welcome to eMed - Your Trusted Pharmacy</h1>
+                <p>
+                    eMed is committed to providing quality healthcare services and products. Our experienced
+                    pharmacists are dedicated to ensuring you receive the best possible care for your health needs.
+                </p>
+                <p>
+                    Whether you need prescriptions filled, health consultations, or access to a wide range of
+                    healthcare products, eMed is here for you.
+                </p>
             </div>
         </div>
     </div>
-</div>
+</body>
+
+</html>
 @endsection

@@ -18,19 +18,6 @@ return [
         'passwords' => 'users',
     ],
 
-    'admin' =>[
-        'driver'=>'eloquent',
-        'model'=>App\Models\Admin::class
-    ],
-    'client' =>[
-        'driver'=>'eloquent',
-        'model'=>App\Models\Client::class
-    ],
-    'staff' =>[
-        'driver'=>'eloquent',
-        'model'=>App\Models\Staff::class
-    ],
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -52,18 +39,6 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-        ],
-         'admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
-        ],
-         'client' => [
-            'driver' => 'session',
-            'provider' => 'clients',
-        ],
-        'staff' => [
-            'driver' => 'session',
-            'provider' => 'staffs',
         ],
     ],
 
@@ -89,19 +64,6 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
-        ],
-        'clients' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Client::class,
-        ],
-        'staffs' => [
-            'driver' => 'eloquent',
-            'model'=>App\Models\Staff::class,
-        ],
-
 
         // 'users' => [
         //     'driver' => 'database',
@@ -134,18 +96,6 @@ return [
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
-        ],
-        'admins'=>[
-            'driver'=>'eloquent',
-            'model'=>App\Models\Admin::class,
-        ],
-        'clients'=>[
-            'driver'=>'eloquent',
-            'model'=>App\Models\Client::class,
-        ],
-        'staffs'=>[
-            'driver'=>'eloquent',
-            'model'=>App\Models\Staff::class,
         ],
     ],
 

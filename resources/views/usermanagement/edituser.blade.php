@@ -1,37 +1,66 @@
+@extends('back.layout.main-layout')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Page Title here')
+@section('content')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Branch</title>
-</head>
-<body>
+@if(session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
+@if(isset($user))
+<!-- Your edit form goes here -->
+<form action="{{ route('updateUser', ['id' => $user->id]) }}" method="post" enctype="multipart/form-data">
+    @csrf
+    @method('post')
+
+    <!-- Your form fields go here, pre-filled with user data -->
     <h2>Edit User</h2>
 
-    @if(isset($admin))
-        <!-- Your edit form goes here -->
-        <form action="{{ route('updateUser', ['id' => $items->id]) }}" method="post">
-            @csrf
-            @method('put')
+    <label for="username">Username:</label>
+    <input type="text" name="username" value="{{ $user->username }}" required><br>
 
-            <!-- Your form fields go here, pre-filled with branch data -->
-            <label for="name">Name:</label>
-            <input type="text" name="name" value="{{ $items->name }}" required><br>
-    
+    <label for="email">Email:</label>
+    <input type="email" name="email" value="{{ $user->email }}" required><br>
 
-            <label for="location">Location:</label>
-            <input type="text" name="location" value="{{ $items->username }}" required><br>
+    <label for="password">Password (Leave blank to keep current):</label>
+    <input type="password" name="password"><br>
 
-            <label for="contact">Contact Number:</label>
-            <input type="text" name="contact" value="{{ $items->email }}" required><br>
+    <label for="firstName">First Name:</label>
+    <input type="text" name="firstName" value="{{ $user->firstName }}" required><br>
 
+    <label for="lastName">Last Name:</label>
+    <input type="text" name="lastName" value="{{ $user->lastName }}" required><br>
 
-            <input type="submit" value="Update Branch">
-        </form>
-    @else
-        <p>No branch data found.</p>
-    @endif
+    <label for="middleName">Middle Name:</label>
+    <input type="text" name="middleName" value="{{ $user->middleName }}"><br>
 
-</body>
-</html>
+    <label for="address">Address:</label>
+    <input type="text" name="address" value="{{ $user->address }}"><br>
+
+    <label for="gender">Gender:</label>
+    <select name="gender" required>
+        <option value="" disabled>Select Gender</option>
+        <option value="male" {{ $user->gender === 'male' ? 'selected' : '' }}>Male</option>
+        <option value="female" {{ $user->gender === 'female' ? 'selected' : '' }}>Female</option>
+        <!-- Add more gender options if needed -->
+    </select><br>
+
+    <label for="age">Age:</label>
+    <input type="number" name="age" value="{{ $user->age }}"><br>
+
+    <label for="role">Role:</label>
+    <select name="role" required>
+        <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
+        <option value="client" {{ $user->role === 'client' ? 'selected' : '' }}>Client</option>
+        <option value="cashier" {{ $user->role === 'cashier' ? 'selected' : '' }}>Cashier</option>
+        <!-- Add more role options if needed -->
+    </select><br>
+
+    <input type="submit" value="Update User">
+</form>
+@else
+<p>No user data found.</p>
+@endif
+
+@endsection

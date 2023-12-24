@@ -44,6 +44,14 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
+        // app/Http/Kernel.php
+
+    protected $routeMiddleware = [
+        // ... other middleware
+        'auth.manual' => \App\Http\Middleware\AuthenticateManual::class,
+        'redirectIfAuthenticated' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+    ];
+
 
     /**
      * The application's middleware aliases.
@@ -64,6 +72,5 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'PreventBackHistory'=> \App\Http\Middleware\PreventBackHistory::class,
     ];
 }

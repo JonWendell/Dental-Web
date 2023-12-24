@@ -438,7 +438,7 @@
 		<div class="left-side-bar">
 			<div class="brand-logo">
 				<a href="index.html">
-					<img src="/back/vendors/images/Dentist.png" alt="" class="dark-logo" />
+					<img src="/back/vendors/images/RXCUE PHARMACY.png" alt="" class="dark-logo" />
 					<img
 						src="/vendors/images/deskapp-logo-white.svg"
 						alt=""
@@ -453,7 +453,7 @@
 				<div class="sidebar-menu">
 					<ul id="accordion-menu">
 						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle no-arrow">
+							<a href="javascript:;" class="dropdown-toggle">
 								<span class="micon bi bi-house"></span
 								><span class="mtext">Home</span>
 							</a>
@@ -462,60 +462,86 @@
 								<li><a href="index3.html">User Dashboard</a></li>
 							</ul>
 						</li>
-
+                        <!--
 						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle no-arrow">
-								<span class="micon bi bi-people"></span>
-								<span class="mtext">Clinic Management</span>
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-textarea-resize"></span
+								><span class="mtext">Forms</span>
 							</a>
-
 							<ul class="submenu">
-								<li><a href="index2.html">Doctor Management</a></li>
-								<li><a href="index3.html">Staff Management</a></li>
-								<li><a href="index3.html">Patient Management</a></li>
+								<li><a href="form-wizard.html">Form Wizard</a></li>
 							</ul>
 						</li>
-                    
+                        -->
 						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle no-arrow">
-								<span class="micon bi bi-calendar"></span>
-								<span class="mtext">Appointment</span>
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-building"></span>
+								<span class="mtext">Manage Branch</span>
 							</a>
+							<!-- Add the following button for creating a branch -->
+							<ul class="submenu">
+								<li>
+							<a href="/create-branch" >Create Branch</a>
 						</li>
-
+					</ul>
 						</li>                    
 						<li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle no-arrow">
-								<span class="micon bi bi-graph-up"></span>
-								<span class="mtext">Statistic</span>
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-person"></span>
+								<span class="mtext">Manage User</span>
 							</a>
+							<!-- Add the button to navigate to the route for managing users -->	
+							<ul class="submenu">
+								<li>				
+							<a href="{{ route('userTable') }}">Manage Users</a>
 						</li>
-
+						</ul>
                         <li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle no-arrow" >
-								<span class="micon bi bi-geo-alt"></span
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-box"></span
 								><span class="mtext">Mapping</span>
 							</a>
+							<ul class="submenu">
+								<li>			
+							
 						</li>
-
+						</ul>
                         <li class="dropdown">
-							<a href="javascript:;" class="dropdown-toggle no-arrow">
-								<span class="micon bi bi-bar-chart"></span
-								><span class="mtext">Visualization</span>
+                            <a href="javascript:;" class="dropdown-toggle">
+                                <i class="micon bi bi-graph-up"></i>
+                                <span class="mtext">Statistics</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-arrow-up-right-square"></span
+								><span class="mtext">Analysis</span>
 							</a>
 						</li>
-
+                        <li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-cart3"></span
+								><span class="mtext">E-commerce</span>
+							</a>
+						</li>
+                        <li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-bag"></span
+								><span class="mtext">Sales</span>
+							</a>
+						</li>
 						<li>
 							<a href="chat.html" class="dropdown-toggle no-arrow">
 								<span class="micon bi bi-chat-right-dots"></span
 								><span class="mtext">Chat</span>
 							</a>
 						</li>
-			
+					
 						<li>
 							<div class="dropdown-divider"></div>
 						</li>
 						<li>
+
 
 						<li>
 							<a
@@ -610,8 +636,244 @@
 						</div>
 					</div>
 				</div>
-
+				<div class="row">
+					<div class="col-xl-8 mb-30">
+						<div class="card-box height-100-p pd-20">
+							<h2 class="h4 mb-20">Statistics</h2>
+							<div id="chart5"></div>
+						</div>
+					</div>
+					<div class="col-xl-4 mb-30">
+						<div class="card-box height-100-p pd-20">
+							<h2 class="h4 mb-20"> Predictive Analysis</h2>
+							<div id="chart6"></div>
+						</div>
+					</div>
+				</div>
+				<div class="card-box mb-30">
+					<h2 class="h4 pd-20">Best Selling Products</h2>
+					<table class="data-table table nowrap">
+						<thead>
+							<tr>
+								<th class="table-plus datatable-nosort">Product</th>
+								<th>Name</th>
+								<th>Description</th>
+								<th>Price</th>
+								<th class="datatable-nosort">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="table-plus">
+									<img
+										src="/back/vendors/images/biogesic.jfif"
+										width="70"
+										height="70"
+										alt=""
+									/>
+								</td>
+								<td>
+									<h5 class="font-16">Biogesic</h5>
+							
+								</td>
+								<td>ck nbkj</td>
+								<td>ahjcfgv</td>
+								<td>
+									<div class="dropdown">
+										<a
+											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+											href="#"
+											role="button"
+											data-toggle="dropdown"
+										>
+											<i class="dw dw-more"></i>
+										</a>
+										<div
+											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+										>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-eye"></i> View</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-edit2"></i> Edit</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-delete-3"></i> Delete</a
+											>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="table-plus">
+									<img
+										src="/back/vendors/images/robitussin.jfif"
+										width="70"
+										height="70"
+										alt=""
+									/>
+								</td>
+								<td>
+									<h5 class="font-16">Robitussin</h5>
+								</td>
+								<td>jdhv</td>
+								<td>900</td>
 				
+								<td>
+									<div class="dropdown">
+										<a
+											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+											href="#"
+											role="button"
+											data-toggle="dropdown"
+										>
+											<i class="dw dw-more"></i>
+										</a>
+										<div
+											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+										>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-eye"></i> View</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-edit2"></i> Edit</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-delete-3"></i> Delete</a
+											>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="table-plus">
+									<img
+										src="/back/vendors/images/solmux.jfif"
+										width="70"
+										height="70"
+										alt=""
+									/>
+								</td>
+								<td>
+									<h5 class="font-16">Solmux</h5>
+			
+								</td>
+								<td>Mgfhjdrf</td>
+								<td>100</td>
+							
+								<td>
+									<div class="dropdown">
+										<a
+											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+											href="#"
+											role="button"
+											data-toggle="dropdown"
+										>
+											<i class="dw dw-more"></i>
+										</a>
+										<div
+											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+										>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-eye"></i> View</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-edit2"></i> Edit</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-delete-3"></i> Delete</a
+											>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="table-plus">
+									<img
+										src="/back/vendors/images/neozep.jfif"
+										width="70"
+										height="70"
+										alt=""
+									/>
+								</td>
+								<td>
+									<h5 class="font-16">Neozep</h5>
+							
+								</td>
+								<td>Lderye</td>
+								<td>30</td>
+							
+								<td>
+									<div class="dropdown">
+										<a
+											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+											href="#"
+											role="button"
+											data-toggle="dropdown"
+										>
+											<i class="dw dw-more"></i>
+										</a>
+										<div
+											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+										>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-eye"></i> View</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-edit2"></i> Edit</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-delete-3"></i> Delete</a
+											>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="table-plus">
+									<img
+										src="/back/vendors/images/paracetamol.jfif"
+										width="70"
+										height="70"
+										alt=""
+									/>
+								</td>
+								<td>
+									<h5 class="font-16">Paracetamol</h5>
+									
+								</td>
+								<td>Mdrfhde</td>
+								<td>120</td>
+								
+								<td>
+									<div class="dropdown">
+										<a
+											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+											href="#"
+											role="button"
+											data-toggle="dropdown"
+										>
+											<i class="dw dw-more"></i>
+										</a>
+										<div
+											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
+										>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-eye"></i> View</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-edit2"></i> Edit</a
+											>
+											<a class="dropdown-item" href="#"
+												><i class="dw dw-delete-3"></i> Delete</a
+											>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 				<div class="footer-wrap pd-20 mb-20 card-box">
 					@2023 | RXCUE PHARMACY
 				</div>
